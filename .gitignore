@@ -1,0 +1,17 @@
+.gradle/
+build/
+app/build/
+app/release/
+*.apk
+!app-release-sample.apk
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+*.jks
+*.keystore
+key.properties
+*.log

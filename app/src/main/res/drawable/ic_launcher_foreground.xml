@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Maceta -->
+    <path
+        android:pathData="M40,78 L68,78 L64,92 C64,94.2 61,96 58,96 L50,96 C47,96 44,94.2 44,92 Z"
+        android:fillColor="#1E2F24" />
+    <path
+        android:pathData="M37,74 L71,74 L69,80 L39,80 Z"
+        android:fillColor="#2A3E30" />
+
+    <!-- Tallo -->
+    <path
+        android:pathData="M52.5,74 C52.5,60 53,52 54,42 C55,52 55.5,60 55.5,74 Z"
+        android:fillColor="#4F8461" />
+
+    <!-- Hoja izquierda -->
+    <path
+        android:pathData="M54,56 C40,52 30,58 30,70 C44,74 54,66 54,56 Z"
+        android:fillColor="#7CD991" />
+
+    <!-- Hoja derecha -->
+    <path
+        android:pathData="M54,46 C68,40 80,46 79,58 C66,63 54,56 54,46 Z"
+        android:fillColor="#7CD991" />
+
+    <!-- Brillo suave -->
+    <path
+        android:pathData="M54,46 C60,44 66,44 71,47 C65,45 59,46 54,49 Z"
+        android:fillColor="#F2F5F0"
+        android:fillAlpha="0.35" />
+</vector>
