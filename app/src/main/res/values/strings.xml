@@ -1,3 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Todos los textos de la app. Español es el idioma base; para traducir, agregar values-<idioma>/strings.xml. -->
 <resources>
     <string name="app_name">Mis Metas</string>
+
+    <!-- Acciones comunes -->
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_close">Cerrar</string>
+    <string name="action_done">Listo</string>
+    <string name="action_ready">Listo</string>
+    <string name="action_delete">Borrar</string>
+    <string name="action_remove">Quitar</string>
+    <string name="action_undo">Deshacer</string>
+    <string name="action_bought">✅ Comprado</string>
+    <string name="action_edit">✏️ Modificar</string>
+    <string name="action_delete_goal">🗑️ Borrar</string>
+
+    <!-- Pantalla principal -->
+    <string name="header_label">MIS METAS</string>
+    <string name="header_title_1">"Lo que estoy "</string>
+    <string name="header_title_2">ahorrando</string>
+    <plurals name="streak_days">
+        <item quantity="one">%1$d día seguido ahorrando</item>
+        <item quantity="other">%1$d días seguidos ahorrando</item>
+    </plurals>
+    <string name="items_header">ÍTEMS</string>
+    <string name="items_subheader">contra tu total actual</string>
+    <string name="filter_all">Todas</string>
+    <string name="empty_title">Aún no hay nada plantado</string>
+    <string name="empty_text">Toca el botón + para agregar lo primero que quieras juntar.</string>
+    <string name="summary_of_goal">de %1$s meta</string>
+    <string name="summary_in_bloom">%1$d de %2$d en flor 🌳</string>
+    <string name="summary_extra">%1$s disponibles para una meta nueva</string>
+    <string name="summary_register">+ Registrar</string>
+    <string name="summary_withdraw">− Restar</string>
+    <string name="summary_transform">🔁 Transformar</string>
+
+    <!-- Descripciones para lectores de pantalla -->
+    <string name="cd_history">Historial</string>
+    <string name="cd_purchased">Comprados</string>
+    <string name="cd_achievements">Logros</string>
+    <string name="cd_details">Detalles</string>
+    <string name="cd_settings">Ajustes</string>
+    <string name="cd_about">Acerca de</string>
+    <string name="cd_new_goal">Nueva meta</string>
+    <string name="cd_move_up">Subir %1$s</string>
+    <string name="cd_move_down">Bajar %1$s</string>
+    <string name="cd_delete_movement">Borrar movimiento</string>
+    <string name="cd_locked">Bloqueado</string>
+    <string name="cd_hour_earlier">Una hora antes</string>
+    <string name="cd_hour_later">Una hora después</string>
+
+    <!-- Tarjeta y detalle de una meta -->
+    <string name="item_saved_of">%1$s de %2$s</string>
+    <string name="item_missing">" · falta %1$s"</string>
+    <string name="item_done">🏆 Misión cumplida</string>
+    <string name="item_waiting">Esperando plata para esta meta</string>
+    <string name="item_due">📅 Vence %1$s</string>
+    <string name="item_overdue">⚠️ Venció %1$s</string>
+    <string name="insight_title">PRONÓSTICO</string>
+    <string name="insight_complete">Ya juntaste el monto completo para esta meta.</string>
+    <string name="insight_deadline_passed">La fecha límite ya pasó.</string>
+    <string name="insight_contribution_week">Para llegar a tiempo, ahorra %1$s por semana.</string>
+    <string name="insight_contribution_day">Para llegar a tiempo, ahorra %1$s por día.</string>
+    <string name="insight_estimate">Al ritmo de tus últimos días (≈%2$s por día) llegarías el %1$s.</string>
+    <string name="insight_estimate_late">A este ritmo (≈%2$s por día) llegarías el %1$s, después de tu fecha límite.</string>
+    <string name="insight_no_rate">Registra tus ahorros para calcular cuándo llegarías.</string>
+
+    <!-- Crear y editar metas -->
+    <string name="meta_new_title">Nueva meta</string>
+    <string name="meta_edit_title">Editar meta</string>
+    <string name="meta_new_subtitle">Agrega algo que quieras comprar</string>
+    <string name="meta_edit_subtitle">Modifica los datos de tu meta</string>
+    <string name="meta_create">Crear meta</string>
+    <string name="meta_save_changes">Guardar cambios</string>
+    <string name="field_name">Nombre</string>
+    <string name="field_name_hint">Ej: Audífonos, Silla gamer...</string>
+    <string name="field_price">Precio total</string>
+    <string name="field_category">Categoría (opcional)</string>
+    <string name="field_category_hint">Ej: Tecnología, Viajes...</string>
+    <string name="field_deadline">Fecha límite (opcional)</string>
+    <string name="deadline_none">Sin fecha</string>
+    <string name="field_image">Imagen (opcional)</string>
+    <string name="image_upload">Subir foto</string>
+    <string name="image_remove">Quitar foto</string>
+    <string name="image_hint">Si no subes imagen, se muestra el ícono de crecimiento de la meta.</string>
+    <string name="cat_tech">Tecnología</string>
+    <string name="cat_travel">Viajes</string>
+    <string name="cat_home">Hogar</string>
+    <string name="cat_clothes">Ropa</string>
+    <string name="cat_health">Salud</string>
+
+    <!-- Dinero -->
+    <string name="field_amount">Monto</string>
+    <string name="field_type">Tipo</string>
+    <string name="money_cash">💵 Efectivo</string>
+    <string name="money_digital">💳 Digital</string>
+    <string name="money_cash_name">Efectivo</string>
+    <string name="money_digital_name">Digital</string>
+    <string name="deposit_title">Registrar nueva cantidad</string>
+    <string name="deposit_subtitle">Este monto se suma a tu total ahorrado</string>
+    <string name="deposit_confirm">Registrar</string>
+    <string name="withdraw_title">Restar dinero</string>
+    <string name="withdraw_available">Disponible — Efectivo: %1$s · Digital: %2$s</string>
+    <string name="withdraw_error">No tienes esa cantidad guardada.</string>
+    <string name="withdraw_confirm">Restar</string>
+    <string name="transform_title">Transformar dinero</string>
+    <string name="transform_subtitle">Convierte plata de un tipo a otro, sin cambiar tu total</string>
+    <string name="transform_from">De</string>
+    <string name="transform_to_cash">Se convertirá a Efectivo</string>
+    <string name="transform_to_digital">Se convertirá a Digital</string>
+    <string name="transform_available_cash">Disponible en efectivo: %1$s</string>
+    <string name="transform_available_digital">Disponible en digital: %1$s</string>
+    <string name="transform_error">No tienes esa cantidad disponible en ese tipo.</string>
+    <string name="transform_confirm">Transformar</string>
+
+    <!-- Detalles y gráfico -->
+    <string name="details_title">Detalles del ahorro</string>
+    <string name="details_subtitle">Cuánto tienes guardado por tipo</string>
+    <string name="details_total">Total</string>
+    <string name="chart_title">Evolución del ahorro</string>
+    <string name="chart_change_up">Subiste %1$s en este período</string>
+    <string name="chart_change_down">Bajaste %1$s en este período</string>
+    <string name="chart_empty">Aún no hay movimientos suficientes para graficar.</string>
+    <string name="chart_summary">Gráfico del total ahorrado: de %1$s el %3$s a %2$s el %4$s.</string>
+    <string name="range_7d">7 días</string>
+    <string name="range_30d">30 días</string>
+    <string name="range_90d">90 días</string>
+    <string name="range_all">Todo</string>
+
+    <!-- Historial y comprados -->
+    <string name="history_title">Historial de movimientos</string>
+    <string name="history_subtitle">Todo lo que has registrado</string>
+    <string name="history_empty_title">Sin movimientos todavía</string>
+    <string name="history_empty_text">Cada vez que registres o restes plata, va a aparecer aquí.</string>
+    <string name="history_deposit">Registro · %1$s</string>
+    <string name="history_withdraw">Retiro · %1$s</string>
+    <string name="history_purchase">Comprado: %1$s</string>
+    <string name="history_cash_to_digital">Efectivo → Digital</string>
+    <string name="history_digital_to_cash">Digital → Efectivo</string>
+    <string name="history_transform">Transformación</string>
+    <string name="history_delete_title">¿Borrar este movimiento?</string>
+    <string name="history_delete_text">Se revertirá su efecto en tu ahorro. Si ese dinero ya se gastó, no se podrá borrar.</string>
+    <string name="purchased_title">Ya compré esto 🏆</string>
+    <string name="purchased_subtitle">Tu archivo de metas cumplidas</string>
+    <string name="purchased_empty_title">Aún nada en la vitrina</string>
+    <string name="purchased_empty_text">Cuando completes una meta y la marques como comprada, va a quedar guardada acá.</string>
+    <string name="purchased_on">Comprado el %1$s</string>
+
+    <!-- Avisos con Deshacer -->
+    <string name="msg_deposit_done">Registrado +%1$s</string>
+    <string name="msg_withdraw_done">Restado −%1$s</string>
+    <string name="msg_transform_done">Convertido %1$s</string>
+    <string name="msg_purchase_done">«%1$s» comprada 🎉</string>
+    <string name="msg_goal_deleted">«%1$s» borrada</string>
+    <string name="msg_goal_reached">🎉 «%1$s» ya está lista para comprar</string>
+    <string name="msg_undone">Listo, se deshizo</string>
+    <string name="msg_movement_deleted">Movimiento borrado</string>
+    <string name="err_withdraw_no_balance">No tienes esa cantidad guardada.</string>
+    <string name="err_transform_no_balance">No tienes esa cantidad disponible en ese tipo.</string>
+    <string name="err_purchase_not_enough">Todavía no te alcanza para esta meta.</string>
+    <string name="err_undo_failed">No se pudo deshacer.</string>
+    <string name="err_movement_cannot_delete">No se puede borrar: dejaría un saldo negativo.</string>
+
+    <!-- Ajustes -->
+    <string name="settings_appearance">Apariencia</string>
+    <string name="settings_appearance_subtitle">Elige cómo se ve la app</string>
+    <string name="settings_dynamic">Colores dinámicos</string>
+    <string name="settings_dynamic_hint">Usa los colores de tu fondo de pantalla</string>
+    <string name="settings_quick">Montos rápidos</string>
+    <string name="settings_quick_hint">Los botones de atajo al registrar dinero</string>
+    <string name="settings_quick_label">Monto %1$d</string>
+    <string name="settings_quick_reset">Restablecer</string>
+    <string name="settings_reminders">Recordatorios</string>
+    <string name="settings_daily">Aviso diario</string>
+    <string name="settings_daily_hint">Si hoy no registraste ahorro, te lo recuerda y cuida tu racha</string>
+    <string name="settings_hour">Hora del aviso</string>
+    <string name="settings_deadline">Metas por vencer</string>
+    <string name="settings_deadline_hint">Avisa 3 días antes de la fecha límite</string>
+    <string name="reminders_permission_denied">Sin el permiso de notificaciones no se pueden enviar recordatorios.</string>
+    <string name="mode_system">Sistema</string>
+    <string name="mode_light">Claro</string>
+    <string name="mode_dark">Oscuro</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Morado</string>
+    <string name="accent_red">Rojo</string>
+    <string name="accent_blue">Azul</string>
+
+    <!-- Notificaciones -->
+    <string name="notif_channel_name">Recordatorios</string>
+    <string name="notif_channel_description">Avisos para cuidar tu racha y tus fechas límite</string>
+    <string name="notif_streak_title">No pierdas tu racha 🔥</string>
+    <plurals name="notif_streak_text">
+        <item quantity="one">Registra hoy y mantén tu racha de %1$d día.</item>
+        <item quantity="other">Registra hoy y mantén tu racha de %1$d días.</item>
+    </plurals>
+    <string name="notif_save_title">¿Ya ahorraste hoy?</string>
+    <string name="notif_save_text">Registra lo que pusiste de lado hoy, aunque sea poco.</string>
+    <string name="notif_deadline_title">«%1$s» está por vencer</string>
+    <plurals name="notif_deadline_text">
+        <item quantity="one">Falta %1$d día y te faltan %2$s.</item>
+        <item quantity="other">Faltan %1$d días y te faltan %2$s.</item>
+    </plurals>
+
+    <!-- Logros -->
+    <string name="achievements_title">Logros</string>
+    <plurals name="achievements_progress">
+        <item quantity="one">%1$d de %2$d logro desbloqueado</item>
+        <item quantity="other">%1$d de %2$d logros desbloqueados</item>
+    </plurals>
+    <plurals name="achievement_unlocked_title">
+        <item quantity="one">¡Logro desbloqueado!</item>
+        <item quantity="other">¡Logros desbloqueados!</item>
+    </plurals>
+    <string name="achievement_unlocked_ok">¡Genial!</string>
+    <string name="ach_first_deposit_title">Primer paso</string>
+    <string name="ach_first_deposit_desc">Registraste tu primer ahorro.</string>
+    <string name="ach_streak3_title">En llamas</string>
+    <string name="ach_streak3_desc">3 días seguidos ahorrando.</string>
+    <string name="ach_streak7_title">Una semana entera</string>
+    <string name="ach_streak7_desc">7 días seguidos ahorrando.</string>
+    <string name="ach_streak30_title">Imparable</string>
+    <string name="ach_streak30_desc">30 días seguidos ahorrando.</string>
+    <string name="ach_first_purchase_title">Misión cumplida</string>
+    <string name="ach_first_purchase_desc">Compraste tu primera meta.</string>
+    <string name="ach_purchases5_title">Comprador estrella</string>
+    <string name="ach_purchases5_desc">Cumpliste 5 metas.</string>
+    <string name="ach_saved100k_title">Buen comienzo</string>
+    <string name="ach_saved100k_desc">Llegaste a $100.000 ahorrados.</string>
+    <string name="ach_saved500k_title">A buen ritmo</string>
+    <string name="ach_saved500k_desc">Llegaste a $500.000 ahorrados.</string>
+    <string name="ach_saved1m_title">Millonario del ahorro</string>
+    <string name="ach_saved1m_desc">Llegaste a $1.000.000 ahorrados.</string>
+    <string name="ach_transform_title">Alquimista</string>
+    <string name="ach_transform_desc">Convertiste dinero entre efectivo y digital.</string>
+    <string name="ach_categories_title">Organizado</string>
+    <string name="ach_categories_desc">Usas 3 categorías distintas.</string>
+
+    <!-- Acerca de -->
+    <string name="info_author">Hecho por xXAlex236Xx</string>
+    <string name="info_description" formatted="false">App de metas de ahorro. 100% local, sin internet.</string>
+
+    <!-- Bienvenida -->
+    <string name="onboarding_skip">Saltar</string>
+    <string name="onboarding_next">Siguiente</string>
+    <string name="onboarding_start">Empezar</string>
+    <string name="onboarding_1_title">Bienvenido a Mis Metas</string>
+    <string name="onboarding_1_body">Una app simple para juntar plata para lo que quieras comprar. Todo se guarda en tu teléfono, sin internet ni cuentas.</string>
+    <string name="onboarding_2_title">Registra lo que ahorras</string>
+    <string name="onboarding_2_body">Con \"+ Registrar\" sumas dinero a tu total, indicando si es efectivo o digital. Con \"− Restar\" lo descuentas si sacaste algo.</string>
+    <string name="onboarding_3_title">Cada meta compara contra tu total</string>
+    <string name="onboarding_3_body">No se reparte la plata entre metas: si tu total alcanza el precio de algo, esa meta queda lista. Para las más caras, tu total es tu avance.</string>
+    <string name="onboarding_4_title">Marca, reordena y celebra</string>
+    <string name="onboarding_4_body">Cuando una meta esté lista, tócala y marca \"Comprado\": se descuenta el monto y queda guardada en tu archivo. Usa las flechas para reordenar, y revisa tu racha, tus logros y el historial cuando quieras.</string>
 </resources>

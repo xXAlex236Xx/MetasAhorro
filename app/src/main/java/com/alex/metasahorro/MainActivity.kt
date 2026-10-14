@@ -18,6 +18,10 @@ import com.alex.metasahorro.ui.OnboardingScreen
 import com.alex.metasahorro.ui.theme.MetasAhorroTheme
 import com.alex.metasahorro.viewmodel.MetasViewModel
 
+/**
+ * Única actividad de la app: muestra el splash mientras carga las preferencias, aplica el tema
+ * elegido y decide entre el onboarding (primera vez) y la pantalla principal.
+ */
 class MainActivity : ComponentActivity() {
 
     private val viewModel: MetasViewModel by viewModels()
@@ -32,7 +36,7 @@ class MainActivity : ComponentActivity() {
             val state by viewModel.uiState.collectAsState()
             val hasSeenOnboarding by viewModel.hasSeenOnboarding.collectAsState()
 
-            MetasAhorroTheme(theme = state.theme) {
+            MetasAhorroTheme(theme = state.theme, mode = state.themeMode, dynamicColor = state.dynamicColor) {
                 Surface(
                     modifier = Modifier
                         .fillMaxSize()

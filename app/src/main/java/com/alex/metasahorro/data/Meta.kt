@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
  * Una meta de ahorro activa (algo que Alex quiere comprar).
  * "position" define el orden manual en la lista (se puede reordenar con las flechas).
  * "deadlineMillis" es opcional: fecha límite autoimpuesta.
+ * "category" es una etiqueta opcional de texto libre (Tecnología, Viajes...) para agrupar y filtrar.
  */
 @Entity(tableName = "metas")
 data class Meta(
@@ -15,5 +16,6 @@ data class Meta(
     val imageUri: String? = null,
     val goal: Double,
     val deadlineMillis: Long? = null,
-    val position: Int = 0
+    val position: Int = 0,
+    val category: String? = null
 )

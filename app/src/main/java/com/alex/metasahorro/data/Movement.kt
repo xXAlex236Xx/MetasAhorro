@@ -3,10 +3,16 @@ package com.alex.metasahorro.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-enum class MovementKind { DEPOSIT, WITHDRAW, PURCHASE }
+/** Tipo de movimiento del historial: depósito, retiro, compra de una meta o conversión efectivo/digital. */
+enum class MovementKind { DEPOSIT, WITHDRAW, PURCHASE, TRANSFORM }
+
+/** De qué forma está guardado el dinero. */
 enum class MoneyType { EFECTIVO, DIGITAL }
 
-/** Un movimiento del historial: registrar plata, restar plata, o comprar una meta. */
+/**
+ * Una línea del historial. `moneyType` solo aplica a depósitos y retiros; `label` guarda el
+ * nombre de la meta (compras) o el sentido de la conversión (transformaciones).
+ */
 @Entity(tableName = "movements")
 data class Movement(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,

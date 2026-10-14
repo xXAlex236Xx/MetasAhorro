@@ -1,5 +1,6 @@
 package com.alex.metasahorro.ui
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -12,39 +13,26 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.alex.metasahorro.R
 import com.alex.metasahorro.ui.theme.SurfaceAltColor
 import com.alex.metasahorro.ui.theme.TextMutedColor
 import kotlinx.coroutines.launch
 
-private data class OnboardingPage(val icon: String, val title: String, val body: String)
+private data class OnboardingPage(val icon: String, @StringRes val title: Int, @StringRes val body: Int)
 
 private val PAGES = listOf(
-    OnboardingPage(
-        icon = "🌱",
-        title = "Bienvenido a Mis Metas",
-        body = "Una app simple para juntar plata para lo que quieras comprar. Todo se guarda en tu teléfono, sin internet ni cuentas."
-    ),
-    OnboardingPage(
-        icon = "💰",
-        title = "Registra lo que ahorras",
-        body = "Con \"+ Registrar\" sumas dinero a tu total, indicando si es efectivo o digital. Con \"− Restar\" lo descuentas si sacaste algo."
-    ),
-    OnboardingPage(
-        icon = "🌳",
-        title = "Cada meta compara contra tu total",
-        body = "No se reparte la plata entre metas: si tu total alcanza el precio de algo, esa meta queda lista. Para las más caras, tu total es tu avance."
-    ),
-    OnboardingPage(
-        icon = "🏆",
-        title = "Marca, reordena y celebra",
-        body = "Cuando una meta esté lista, tócala y marca \"Comprado\"  se descuenta el monto y queda guardada en tu archivo. Usa las flechas para reordenar, y revisa tu racha e historial cuando quieras."
-    )
+    OnboardingPage("🌱", R.string.onboarding_1_title, R.string.onboarding_1_body),
+    OnboardingPage("💰", R.string.onboarding_2_title, R.string.onboarding_2_body),
+    OnboardingPage("🌳", R.string.onboarding_3_title, R.string.onboarding_3_body),
+    OnboardingPage("🏆", R.string.onboarding_4_title, R.string.onboarding_4_body)
 )
 
+/** Introducción de 4 páginas que se muestra solo la primera vez que se abre la app. */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(onFinish: () -> Unit) {
@@ -54,7 +42,7 @@ fun OnboardingScreen(onFinish: () -> Unit) {
 
     Column(modifier = Modifier.fillMaxSize().padding(24.dp)) {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-            TextButton(onClick = onFinish) { Text("Saltar", color = TextMutedColor) }
+            TextButton(onClick = onFinish) { Text(stringResource(R.string.onboarding_skip), color = TextMutedColor) }
         }
 
         HorizontalPager(
@@ -78,14 +66,14 @@ fun OnboardingScreen(onFinish: () -> Unit) {
                 }
                 Spacer(Modifier.height(28.dp))
                 Text(
-                    p.title,
+                    stringResource(p.title),
                     fontSize = 22.sp,
                     fontWeight = FontWeight.SemiBold,
                     textAlign = TextAlign.Center
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    p.body,
+                    stringResource(p.body),
                     fontSize = 14.sp,
                     color = TextMutedColor,
                     textAlign = TextAlign.Center,
@@ -120,7 +108,7 @@ fun OnboardingScreen(onFinish: () -> Unit) {
             },
             modifier = Modifier.fillMaxWidth().height(50.dp)
         ) {
-            Text(if (isLast) "Empezar" else "Siguiente")
+            Text(stringResource(if (isLast) R.string.onboarding_start else R.string.onboarding_next))
         }
     }
 }

@@ -8,12 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.alex.metasahorro.R
 import com.alex.metasahorro.ui.theme.SurfaceAltColor
 import com.alex.metasahorro.ui.theme.TextMutedColor
 
+/** Acerca de: nombre de la app, autor y una línea de descripción. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InfoSheet(onDismiss: () -> Unit) {
@@ -29,18 +33,18 @@ fun InfoSheet(onDismiss: () -> Unit) {
                 Text("🌱", fontSize = 28.sp)
             }
             Spacer(Modifier.height(14.dp))
-            Text("Mis Metas", fontWeight = FontWeight.SemiBold, fontSize = 19.sp)
+            Text(stringResource(R.string.app_name), fontWeight = FontWeight.SemiBold, fontSize = 19.sp)
             Spacer(Modifier.height(4.dp))
-            Text("Hecho por xXAlex236Xx", fontSize = 13.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.info_author), fontSize = 13.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(10.dp))
             Text(
-                "App de metas de ahorro. 100% local, sin internet.",
+                stringResource(R.string.info_description),
                 fontSize = 12.5.sp,
                 color = TextMutedColor,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                textAlign = TextAlign.Center
             )
             Spacer(Modifier.height(20.dp))
-            Button(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) { Text("Cerrar") }
+            Button(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) { Text(stringResource(R.string.action_close)) }
         }
     }
 }
