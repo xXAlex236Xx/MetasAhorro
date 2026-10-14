@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="148" font-family="sans-serif" font-size="11">
+<rect x="4" y="4" width="142" height="66" rx="10" fill="#7CD991" stroke="#888" stroke-opacity="0.4"/>
+<text x="14" y="30" fill="#111">accent GREEN</text>
+<text x="14" y="50" fill="#111" opacity="0.8">#7CD991</text>
+<rect x="154" y="4" width="142" height="66" rx="10" fill="#C9A6FF" stroke="#888" stroke-opacity="0.4"/>
+<text x="164" y="30" fill="#111">accent PURPLE</text>
+<text x="164" y="50" fill="#111" opacity="0.8">#C9A6FF</text>
+<rect x="304" y="4" width="142" height="66" rx="10" fill="#F2836B" stroke="#888" stroke-opacity="0.4"/>
+<text x="314" y="30" fill="#111">accent RED</text>
+<text x="314" y="50" fill="#111" opacity="0.8">#F2836B</text>
+<rect x="454" y="4" width="142" height="66" rx="10" fill="#6FB8F2" stroke="#888" stroke-opacity="0.4"/>
+<text x="464" y="30" fill="#111">accent BLUE</text>
+<text x="464" y="50" fill="#111" opacity="0.8">#6FB8F2</text>
+<rect x="4" y="78" width="142" height="66" rx="10" fill="#2E7D4A" stroke="#888" stroke-opacity="0.4"/>
+<text x="14" y="104" fill="#fff">accent GREEN</text>
+<text x="14" y="124" fill="#fff" opacity="0.8">#2E7D4A</text>
+<rect x="154" y="78" width="142" height="66" rx="10" fill="#6D4BC2" stroke="#888" stroke-opacity="0.4"/>
+<text x="164" y="104" fill="#fff">accent PURPLE</text>
+<text x="164" y="124" fill="#fff" opacity="0.8">#6D4BC2</text>
+<rect x="304" y="78" width="142" height="66" rx="10" fill="#C24F3B" stroke="#888" stroke-opacity="0.4"/>
+<text x="314" y="104" fill="#fff">accent RED</text>
+<text x="314" y="124" fill="#fff" opacity="0.8">#C24F3B</text>
+<rect x="454" y="78" width="142" height="66" rx="10" fill="#2B6FB5" stroke="#888" stroke-opacity="0.4"/>
+<text x="464" y="104" fill="#fff">accent BLUE</text>
+<text x="464" y="124" fill="#fff" opacity="0.8">#2B6FB5</text>
+</svg>
